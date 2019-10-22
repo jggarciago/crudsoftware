@@ -36,17 +36,17 @@ public class CRUDEnfermero {
      * Web service operation
      */
     @WebMethod(operationName = "create")
-    public boolean create(@WebParam(name = "cedula") String cedula, @WebParam(name = "name") String name, @WebParam(name = "phone") String phone) {
-        return enfermeros.add(new Enfermero(cedula,name, phone));
+    public boolean create(@WebParam(name = "cedula") String cedula, @WebParam(name = "name") String name, @WebParam(name = "address") String address) {
+        return enfermeros.add(new Enfermero(cedula,name, address));
     }
 
     /**
      * Web service operation
      */
     @WebMethod(operationName = "update")
-    public boolean update(@WebParam(name = "cedula") String cedula, @WebParam(name = "newCedula") String newCedula, @WebParam(name = "newName") String newName, @WebParam(name = "newPhone") String newPhone) {
+    public boolean update(@WebParam(name = "cedula") String cedula, @WebParam(name = "newCedula") String newCedula, @WebParam(name = "newName") String newName, @WebParam(name = "newAddress") String newAddress) {
         borrar(cedula);
-        return enfermeros.add(new Enfermero(newCedula,newName, newPhone));
+        return enfermeros.add(new Enfermero(newCedula,newName, newAddress));
     }
 
     /**

@@ -12,11 +12,11 @@ package com.ingelagj.crud;
 public class Enfermero {
     private String cedula;
     private String name;
-    private String phone;
-    public Enfermero(String cedula, String name, String phone){
+    private String address;
+    public Enfermero(String cedula, String name, String address){
         this.cedula = cedula;
         this.name = name;
-        this.phone = phone;
+        this.address = address;
     }
     
     public boolean equals(String cedula){
