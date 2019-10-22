@@ -36,17 +36,17 @@ public class CRUDMedico {
      * Web service operation
      */
     @WebMethod(operationName = "create")
-    public boolean create(@WebParam(name = "cedula") String cedula, @WebParam(name = "name") String name, @WebParam(name = "phone") String phone) {
-        return medicos.add(new Medico(cedula,name, phone));
+    public boolean create(@WebParam(name = "cedula") String cedula, @WebParam(name = "name") String name, @WebParam(name = "phone") String phone, @WebParam(name = "specialty") String specialty) {
+        return medicos.add(new Medico(cedula,name, phone, specialty));
     }
 
     /**
      * Web service operation
      */
     @WebMethod(operationName = "update")
-    public boolean update(@WebParam(name = "cedula") String cedula, @WebParam(name = "newCedula") String newCedula, @WebParam(name = "newName") String newName, @WebParam(name = "newPhone") String newPhone) {
+    public boolean update(@WebParam(name = "cedula") String cedula, @WebParam(name = "newCedula") String newCedula, @WebParam(name = "newName") String newName, @WebParam(name = "newPhone") String newPhone, @WebParam(name = "newSpecialty") String newSpecialty) {
         borrar(cedula);
-        return medicos.add(new Medico(newCedula,newName, newPhone));
+        return medicos.add(new Medico(newCedula,newName, newPhone, newSpecialty));
     }
 
     /**

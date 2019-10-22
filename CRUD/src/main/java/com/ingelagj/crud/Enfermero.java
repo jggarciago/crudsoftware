@@ -13,10 +13,12 @@ public class Enfermero {
     private String cedula;
     private String name;
     private String address;
-    public Enfermero(String cedula, String name, String address){
+    private double salary;
+    public Enfermero(String cedula, String name, String address, double salary){
         this.cedula = cedula;
         this.name = name;
         this.address = address;
+        this.salary = salary;
     }
     
     public boolean equals(String cedula){

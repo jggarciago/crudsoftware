@@ -13,10 +13,12 @@ public class Medico {
     private String cedula;
     private String name;
     private String phone;
-    public Medico(String cedula, String name, String phone){
+    private String specialty;
+    public Medico(String cedula, String name, String phone, String specialty){
         this.cedula = cedula;
         this.name = name;
         this.phone = phone;
+        this.specialty = specialty;
     }
     
     public boolean equals(String cedula){
